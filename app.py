@@ -114,7 +114,7 @@ class MovieView(Resource):
     def delete(self,mid):
         movie=Movie.query.get(mid)
 
-        db.session.add(movie)
+        db.session.delete(movie)
         db.session.commit()
         db.session.close()
 
