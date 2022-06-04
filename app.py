@@ -105,7 +105,7 @@ class MovieView(Resource):
         movie.description = data['description']
         movie.year = data['year']
         movie.rating = data['rating']
-        movie.genre = data['genre_id']
+        movie.genre_id = data['genre_id']
         movie.director_id = data['director_id']
         db.session.add(movie)
         db.session.commit()
